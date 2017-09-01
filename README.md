@@ -1,5 +1,7 @@
 finale
 ======
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/jrop/finale.svg)](https://greenkeeper.io/)
 >Predict finishing times of long-running tasks with ease!
 
 # Installing
