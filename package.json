@@ -1,17 +1,28 @@
 {
   "name": "finale",
-  "version": "1.0.0",
-  "description": "",
+  "version": "2.0.0",
+  "description": "An easy way to compute a task's predicted finish time",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "istanbul cover -x test.js _mocha test.js"
+    "ci": "bun tsc && bun run test && bun biome ci .",
+    "lint": "biome check .",
+    "lint:fix": "biome check --apply-unsafe .",
+    "prepack": "bun ci",
+    "test": "bun test *.test.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "istanbul": "^0.4.2",
-    "mocha": "^2.4.5"
+    "@biomejs/biome": "^1.4.1",
+    "bun-types": "latest",
+    "typescript": "^5.0.0"
   },
-  "repository": "jrop/finale"
+  "repository": "jrop/finale",
+  "files": [
+    "*.js",
+    "*.d.ts",
+    "!*.test.js"
+  ]
 }
